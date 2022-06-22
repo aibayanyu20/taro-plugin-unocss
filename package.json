@@ -1,6 +1,6 @@
 {
   "name": "taro-plugin-unocss",
-  "version": "0.0.1-beta.3",
+  "version": "0.0.1-beta.0",
   "description": "",
   "main": "dist/index.cjs",
   "module": "dist/index.mjs",
@@ -9,6 +9,9 @@
     "build": "unbuild",
     "release": "bumpp"
   },
+  "files": [
+    "dist"
+  ],
   "keywords": [],
   "author": "",
   "license": "MIT",
