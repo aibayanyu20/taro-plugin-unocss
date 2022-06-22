@@ -5,19 +5,20 @@ import {
   presetTypography,
   presetUno,
 } from 'unocss'
-import presetRemToPx from '@unocss/preset-rem-to-px'
+import { presetRemToRpx } from './rem2rpx'
 import type { UnocssPluginOptions } from './typing'
 
 export default (ctx: IPluginContext, unocssPluginOptions?: UnocssPluginOptions) => {
-  const { options, defaults } = unocssPluginOptions || {}
+  const { options, defaults, preset } = unocssPluginOptions || {}
+  const { uno = {}, remToRpx = {}, attributify = {}, typography = {} } = preset || {}
   ctx.modifyWebpackChain(({ chain }) => {
     chain.plugin('unocss').use(Unocss({
       ...(options || {}),
       presets: [
-        presetUno(),
-        presetAttributify(),
-        presetTypography(),
-        presetRemToPx(),
+        presetUno(uno),
+        presetAttributify(attributify),
+        presetTypography(typography),
+        presetRemToRpx(remToRpx),
         ...(options?.presets || []),
       ],
       theme: {

@@ -31,6 +31,10 @@
   },
   "devDependencies": {
     "@mistjs/eslint-config": "^0.0.2",
+    "@unocss/core": "^0.39.3",
+    "@unocss/preset-attributify": "^0.39.3",
+    "@unocss/preset-typography": "^0.39.3",
+    "@unocss/preset-uno": "^0.39.3",
     "bumpp": "^8.2.1",
     "eslint": "^8.18.0",
     "typescript": "^4.7.4",
