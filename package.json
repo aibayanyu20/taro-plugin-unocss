@@ -1,0 +1,36 @@
+{
+  "name": "taro-plugin-unocss",
+  "version": "0.0.1-beta.2",
+  "description": "",
+  "main": "dist/index.cjs",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "unbuild",
+    "release": "bumpp"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@tarojs/service": "^3.4.12",
+    "@unocss/preset-rem-to-px": "^0.39.3",
+    "@unocss/webpack": "^0.39.3",
+    "unocss": "^0.39.3"
+  },
+  "pnpm": {
+    "peerDependencyRules": {
+      "ignoreMissing": [
+        "vite",
+        "webpack"
+      ]
+    }
+  },
+  "devDependencies": {
+    "@mistjs/eslint-config": "^0.0.2",
+    "bumpp": "^8.2.1",
+    "eslint": "^8.18.0",
+    "typescript": "^4.7.4",
+    "unbuild": "^0.7.4"
+  }
+}
