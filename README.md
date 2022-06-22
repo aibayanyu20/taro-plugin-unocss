@@ -50,7 +50,7 @@ const config = {
 presetUno()
 presetAttributify()
 presetTypography()
-presetRemToPx()
+presetRemToRPx()
 
 ```
 
