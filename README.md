@@ -51,9 +51,15 @@ presetUno()
 presetAttributify()
 presetTypography()
 presetRemToPx()
+
 ```
 
 
 如果需要扩展，请参考[unocss文档](https://github.com/unocss/unocss/tree/main/packages/webpack)，去配置`options`和`defaults`
 
 参数对应关系`Unocss(options,defaults)`
+
+
+## 注意
+
+由于小程序的限制，并不能全部兼容`unocss`的所有功能，请参考[WXSS文档](https://developers.weixin.qq.com/miniprogram/dev/framework/view/wxss.html)
