@@ -6,9 +6,12 @@ export default defineBuildConfig({
   ],
   externals: [
     '@tarojs/service',
-    '@unocss/preset-rem-to-px',
     '@unocss/webpack',
     'unocss',
+    '@unocss/core',
+    '@unocss/preset-uno',
+    '@unocss/preset-attributify',
+    '@unocss/preset-mini',
   ],
   rollup: {
     emitCJS: true,

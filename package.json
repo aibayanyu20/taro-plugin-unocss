@@ -16,7 +16,11 @@
     "release": "bumpp"
   },
   "dependencies": {
-    "@tarojs/service": "^3.4.12",
+    "@tarojs/service": "^3.4.13",
+    "@unocss/core": "^0.39.3",
+    "@unocss/preset-attributify": "^0.39.3",
+    "@unocss/preset-typography": "^0.39.3",
+    "@unocss/preset-uno": "^0.39.3",
     "@unocss/webpack": "^0.39.3",
     "unocss": "^0.39.3"
   },
@@ -30,12 +34,8 @@
   },
   "devDependencies": {
     "@mistjs/eslint-config": "^0.0.2",
-    "@unocss/core": "^0.39.3",
-    "@unocss/preset-attributify": "^0.39.3",
-    "@unocss/preset-typography": "^0.39.3",
-    "@unocss/preset-uno": "^0.39.3",
     "bumpp": "^8.2.1",
-    "eslint": "^8.18.0",
+    "eslint": "^8.19.0",
     "typescript": "^4.7.4",
     "unbuild": "^0.7.4"
   }
