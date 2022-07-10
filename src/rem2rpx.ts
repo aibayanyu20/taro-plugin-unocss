@@ -4,7 +4,7 @@ const remRE = /^-?[\.\d]+rem$/
 export interface RemToPxOptions {
   /**
      * 1rem = n rpx
-     * @default 4
+     * @default 16
      */
   baseFontSize?: number
 }
