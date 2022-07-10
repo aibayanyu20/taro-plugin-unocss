@@ -2,22 +2,21 @@
   "name": "taro-plugin-unocss",
   "version": "0.0.2",
   "description": "",
+  "keywords": [],
+  "license": "MIT",
+  "author": "",
   "main": "dist/index.cjs",
   "module": "dist/index.mjs",
   "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "build": "unbuild",
     "release": "bumpp"
   },
-  "files": [
-    "dist"
-  ],
-  "keywords": [],
-  "author": "",
-  "license": "MIT",
   "dependencies": {
     "@tarojs/service": "^3.4.12",
-    "@unocss/preset-rem-to-px": "^0.39.3",
     "@unocss/webpack": "^0.39.3",
     "unocss": "^0.39.3"
   },

@@ -5,7 +5,6 @@ specifiers:
   '@tarojs/service': ^3.4.12
   '@unocss/core': ^0.39.3
   '@unocss/preset-attributify': ^0.39.3
-  '@unocss/preset-rem-to-px': ^0.39.3
   '@unocss/preset-typography': ^0.39.3
   '@unocss/preset-uno': ^0.39.3
   '@unocss/webpack': ^0.39.3
@@ -17,7 +16,6 @@ specifiers:
 
 dependencies:
   '@tarojs/service': 3.4.12
-  '@unocss/preset-rem-to-px': 0.39.3
   '@unocss/webpack': 0.39.3
   unocss: 0.39.3_@unocss+webpack@0.39.3
 
@@ -1893,12 +1891,6 @@ packages:
     resolution: {integrity: sha512-XCxp3mwWsEpCo0cIJA3tLrWqdAL09gP3wv9iGh4H9o0fIPlYXjVTC1WtUHkv3C09LdZ+MH/9Ja/KqnVf3bNROA==}
     dependencies:
       '@unocss/core': 0.39.3
-
-  /@unocss/preset-rem-to-px/0.39.3:
-    resolution: {integrity: sha512-ptjrwXPt5/oTFgSzG27HvHZ/fhGVXBcekGO0npLiBiY1c/7+2cR5t6w/SswIdcFAAjxz0HGXy34S5EmsMm93ow==}
-    dependencies:
-      '@unocss/core': 0.39.3
-    dev: false
 
   /@unocss/preset-tagify/0.39.3:
     resolution: {integrity: sha512-OXE47cS/tiL92ZThgLOpbSFy7MPZ4upE4ZX1m9pnCaWzX7LBzp8Gw0DM+dF3IYdIfJpmU4R6b53ME8SchofuHA==}
