@@ -12,18 +12,24 @@ export default (ctx: IPluginContext, unocssPluginOptions?: UnocssPluginOptions) 
   const { options, defaults, preset } = unocssPluginOptions || {}
   const { uno = {}, remToRpx = {}, attributify = {}, typography = {} } = preset || {}
   ctx.modifyWebpackChain(({ chain }) => {
+    const isH5 = ctx.platforms.has('h5')
+    const unocssPresets = [
+      presetUno(uno),
+      presetAttributify(attributify),
+      presetTypography(typography),
+    ]
+    if (!isH5)
+      unocssPresets.push(presetRemToRpx(remToRpx))
+
     chain.plugin('unocss').use(Unocss({
       ...(options || {}),
       presets: [
-        presetUno(uno),
-        presetAttributify(attributify),
-        presetTypography(typography),
-        presetRemToRpx(remToRpx),
+        ...unocssPresets,
         ...(options?.presets || []),
       ],
       theme: {
         ...(options?.theme || {}),
-        preflightBase: false,
+        preflightBase: !!isH5,
       },
     }, defaults))
     chain.merge({

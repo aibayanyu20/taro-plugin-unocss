@@ -7,15 +7,23 @@ export interface RemToPxOptions {
      * @default 16
      */
   baseFontSize?: number
+  /**
+   * is h5
+   */
+  isH5?: boolean
 }
 
 export const presetRemToRpx = (options: RemToPxOptions = {}): Preset => {
   const {
     baseFontSize = 16,
+    isH5 = false,
   } = options
   return {
     name: '@unocss/preset-rem-to-rpx',
     postprocess: (util) => {
+      // check is not h5
+      if (isH5)
+        return
       util.entries.forEach((i) => {
         const value = i[1]
         if (value && typeof value === 'string' && remRE.test(value))
