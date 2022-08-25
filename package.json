@@ -13,6 +13,7 @@
   ],
   "scripts": {
     "build": "unbuild",
+    "stub": "unbuild --stub",
     "release": "bumpp"
   },
   "dependencies": {

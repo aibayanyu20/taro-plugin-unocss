@@ -18,8 +18,7 @@ export default (ctx: IPluginContext, unocssPluginOptions?: UnocssPluginOptions) 
       presetAttributify(attributify),
       presetTypography(typography),
     ]
-    if (!isH5)
-      unocssPresets.push(presetRemToRpx(remToRpx))
+    unocssPresets.push(presetRemToRpx({ ...remToRpx, isH5 }))
 
     chain.plugin('unocss').use(Unocss({
       ...(options || {}),
@@ -29,7 +28,7 @@ export default (ctx: IPluginContext, unocssPluginOptions?: UnocssPluginOptions) 
       ],
       theme: {
         ...(options?.theme || {}),
-        preflightBase: !!isH5,
+        preflightBase: isH5,
       },
     }, defaults))
     chain.merge({
